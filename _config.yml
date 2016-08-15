@@ -2,9 +2,9 @@
 permalink:           pretty
 
 # Setup
-title:               Poole
-tagline:             The Jekyll Butler
-url:                 http://getpoole.com
+title:               Dusko Pijetlovic
+tagline:             Dusko Pijetlovic
+url:                 http://duskopijetlovic.com
 paginate:            1
 baseurl:             ""
 
@@ -17,16 +17,26 @@ sass:
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Dusko Pijetlovic
+  url:               http://duskopijetlovic.com
+  email:             dusko@duskopijetlovic.com
 
 # Custom vars
-version:             2.0.0
+version:             1.0.0
 github:
-  repo:              https://github.com/poole/poole
+  repo:              https://duskop.github.io
 
 # Gems
 gems:
   - jekyll-paginate
   - jekyll-gist
+
+# Pages list
+# From:
+#   http://joshualande.com/jekyll-github-pages-poole
+#
+# This is the list of pages to incldue in the header of the website.
+pages_list:       
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/atom.xml'
