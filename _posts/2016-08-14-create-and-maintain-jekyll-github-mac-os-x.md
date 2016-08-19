@@ -160,9 +160,9 @@ $ git push -u origin master
 ```
 
 
-From [How I Created a Beautiful and Minimal Blog Using Jekyll, Github Pages, and poole](http://joshualande.com/jekyll-github-pages-poole)   
+From [How I Created a Beautiful and Minimal Blog Using Jekyll, Github Pages, and poole](http://joshualande.com/jekyll-github-pages-poole):   
 
-Create an Archive page which lists all of blog posts. To do this, create the file archive.md which shows a dynamic list of all blog posts:
+Create an Archive page which lists all of blog posts. To do this, create the file archive.md which shows a dynamic list of all blog posts:   
 
 {% highlight html %}
 {% raw %}
