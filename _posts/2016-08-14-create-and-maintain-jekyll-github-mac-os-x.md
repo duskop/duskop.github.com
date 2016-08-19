@@ -164,7 +164,8 @@ From [How I Created a Beautiful and Minimal Blog Using Jekyll, Github Pages, and
 
 Create an Archive page which lists all of blog posts. To do this, create the file archive.md which shows a dynamic list of all blog posts:
 
-```
+{% highlight html %}
+{% raw %}
 $ cd ~/duskop.github.com
 
 $ vim archive.md
@@ -179,7 +180,8 @@ title: Archive
 {% for post in site.posts %}
   * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
 {% endfor %}
-```
+{% endraw %}
+{% endhighlight %}
 
 
 ```
