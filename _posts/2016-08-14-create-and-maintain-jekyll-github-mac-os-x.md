@@ -1,3 +1,8 @@
+---
+layout: post
+title:  Create and Maintain Jekyll GitHub Page - Mac OS X
+---
+
 ### Create and Maintain Jekyll GitHub Page - Mac OS X ###
 
 ```
@@ -264,16 +269,31 @@ $ git push -u origin master
 ```
 
 
-To add a new post, create a Markdown file in ```_posts``` directory.
-
 ```
 $ printf "source 'https://rubygems.org'\n" > Gemfile
 $ printf "gem 'github-pages'\n" >> Gemfile
 ```
 
 
+To add a new post, create a Markdown file in ```_posts``` directory.
+
+
 ```
 $ vim ~/duskop.github.com/_posts/2016-08-14-my-post-about-something.md
+```
+
+
+Ensure that you have a proper header:
+
+```
+---
+layout: post
+title:  My Post About Something
+---
+```
+
+
+```
 $ git add --all
 $ git commit -m "Added a new post"
 $ git push -u origin master
