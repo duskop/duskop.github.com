@@ -748,6 +748,7 @@ Starting apache.
 AH00013: Pre-configuration failed
 ```
 
+
 Fix: Switch to the prefork MPM, which does not use threads -=> replace mpm_event_module with mpm_prefork_module:
 
 ```
@@ -794,7 +795,9 @@ Starting apache.
 apache is running as pid 1557.
 ```
 
-Vhost Setup
+
+Vhost Setup 
+
 ```
 # grep -n vhosts /usr/pkg/etc/httpd/httpd.conf
 486:#Include etc/httpd/httpd-vhosts.conf
@@ -908,7 +911,9 @@ My Grav Blog
 ^C punt!
 ```
 
+
 Grav Installation 
+
 ```
 # rm -i /var/www/grav/index.html
 remove '/var/www/grav/index.html'? y
