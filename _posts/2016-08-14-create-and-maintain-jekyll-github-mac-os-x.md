@@ -297,6 +297,15 @@ title:  My Post About Something
 ```
 
 
+Change the directory to your GitHub pages on your local system.    
+
+```
+$ cd /Users/dusko/duskop.github.com
+```
+
+
+Commit and push the changes.    
+
 ```
 $ git add --all
 $ git commit -m "Added a new post"

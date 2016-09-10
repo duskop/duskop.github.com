@@ -586,7 +586,7 @@ nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
 
 ### Configure PHP-FPM ###
 
-I previously installed Xcode 7.3.1 and Command Line Tools for Xcode. -- PHP version on my OS X 10.11 El Capitan.      
+I previously installed Xcode 7.3.1 and Command Line Tools for Xcode. -- PHP version on my OS X 10.11 El Capitan is 5.5.36:      
 
 ```
 $ which php
@@ -612,7 +612,7 @@ $ php --modules | grep -i fpm
 
 
 ```
-locate fpm 
+$ locate fpm 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/share/man/man8/php-fpm.8
 /usr/sbin/php-fpm
 /usr/share/man/man8/php-fpm.8
@@ -967,6 +967,59 @@ $ wget https://github.com/getgrav/grav-skeleton-saturn-site/releases/download/1.
 $ unzip grav-skeleton-saturn-site-v1.1.0.zip 
 $ rm -rf /Users/dusko/grav
 $ mv /Users/dusko/grav-skeleton-saturn-site /Users/dusko/grav
+```
+
+
+Test.
+
+
+```
+$ nc grav.localhost 80
+```
+
+Type in headers as following:
+
+```
+GET / HTTP/1.1
+Host: duskopijetlovic.com
+```
+
+
+After you've typed in the headers, press ENTER twice, and the server will send back the requested page.
+
+
+```
+HTTP/1.1 200 OK
+Server: nginx/1.10.1
+Date: Sat, 10 Sep 2016 01:46:46 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.5.36
+Set-Cookie: grav-site-900030b=6c740128ccf7bf0a9f51e56b801d7789; expires=Sat, 10-Sep-2016 02:16:45 GMT; Max-Age=1800; path=/
+Pragma: no-cache
+Set-Cookie: grav-site-900030b=6c740128ccf7bf0a9f51e56b801d7789; expires=Sat, 10-Sep-2016 02:16:45 GMT; Max-Age=1800; path=/; domain=grav.localhost; httponly
+Cache-Control: max-age=604800
+Expires: Sat, 17 Sep 2016 01:46:46 GMT
+
+16b4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="utf-8" />
+        <title>Blog | Dusko Pijetlovic</title>
+        <meta name="generator" content="GravCMS" />
+<meta name="description" content="The personal website of Dusko Pijetlovic." />
+... [ snip ] ...
+... [ snip ] ...
+... [ snip ] ...
+    </body>
+</html>
+
+0
+
+^C
+
 ```
 
 
