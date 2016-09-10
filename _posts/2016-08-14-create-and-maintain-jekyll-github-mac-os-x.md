@@ -277,6 +277,8 @@ $ printf "gem 'github-pages'\n" >> Gemfile
 ```
 
 
+#### Add or Update the Content  ####
+
 To add a new post, create a Markdown file in ```_posts``` directory.
 
 
