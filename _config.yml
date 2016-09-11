@@ -41,3 +41,6 @@ pages_list:
   Main Site: 'http://duskopijetlovic.com'
   Archive: '/archive'
   Feed: '/atom.xml'
+
+# Google services
+google_analytics: UA-83999740-1
