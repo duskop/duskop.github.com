@@ -918,6 +918,9 @@ dusko           39418   0.0  0.0  2487132    636   ??  S     5:32pm   0:00.00 ph
 dusko           39417   0.0  0.0  2487132    612   ??  S     5:32pm   0:00.00 php-fpm
 root            39416   0.0  0.0  2487132    804   ??  Ss    5:32pm   0:00.00 php-fpm
 
+$ ps aux | grep fpm | grep root
+root            39416   0.0  0.0  2487132    804   ??  Ss    5:32pm   0:00.00 php-fpm
+
 $ sudo kill -TERM 39416
 Password:
 
