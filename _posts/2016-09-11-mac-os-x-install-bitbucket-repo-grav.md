@@ -72,8 +72,13 @@ $ grep -n include /etc/nginx/nginx.conf
 
 My "sites-available" directory's default file, with comments and blank lines removed.     
 
+grep note:    
+grep -v '[[:space:]]#' -> Invert match: remove commented lines that are indented (with preceding spaces).   
+grep -v ^#             -> Remove non-indented commented out lines, that is, lines with the comment symbol (#) in the first column.    
+grep -v "^$"           -> Remove blank (empty) lines.     
+
 ```
-$ grep -v \# /etc/nginx/sites-available/default | grep '[^ ]' 
+$ grep -v '[[:space:]]#' /etc/nginx/sites-available/default | grep -v ^# | grep -v "^$"
 server {
    listen 80;
    server_name duskopijetlovic.com;
