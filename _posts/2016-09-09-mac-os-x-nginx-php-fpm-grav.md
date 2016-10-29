@@ -1,7 +1,29 @@
 ---
 layout: post
-title:  Install Nginx and Configure PHP-FPM for Grav on OS X 10.9
+title:  Install Nginx and Configure PHP-FPM for Grav on OS X 10.11
 ---
+
+### PHP ###
+
+Mac OS X El Capitan comes pre-installed with PHP version 5.5, which has reached its [end of life](http://php.net/supported-versions.php).    
+
+
+### Install Xcode ###
+
+When I used the locate(1) program or tried to update the locate database on my OS X version (OS X El Capitan, Mac OS X 10.11), it was not working, and was producing an empty output. Fixed it by installing Xcode. Xcode version compatible with my system is Xcode 7.3.1.       
+
+After installing Xcode, open Xcode.app in /Applications folder and agree to the licence.     
+
+
+### Install Xcode Command Line Tools ###
+
+Command Line Tools for Xcode is a requirement for Homebrew.     
+
+Open a Terminal.app and install the Xcode command line tools:       
+
+```
+$ xcode-select --install
+```
 
 
 ### Install Nginx ###
@@ -586,7 +608,7 @@ nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
 
 ### Configure PHP-FPM ###
 
-I previously installed Xcode 7.3.1 and Command Line Tools for Xcode. -- PHP version on my OS X 10.11 El Capitan is 5.5.36:      
+Mac OS X El Capitan comes pre-installed with PHP version 5.5.     
 
 ```
 $ which php
@@ -800,8 +822,14 @@ $ diff --unified=0 /private/etc/php-fpm.conf.bak /private/etc/php-fpm.conf
 ```
 
 
+I didn't configure auto start for php-fpm since I prefer to run php-fpm manually as needed by simply executing:    
 
-The nginx recommended method of serving up multiple websites used to be to create sites-available and sites-enabled directories within the nginx install. You would create your conf files in sites-available and then symlink them to sites-enabled if you wanted to enable them. This way you could enable and disable websites based on whether the conf is symlinked in sites-enabled. When installed with Homebrew, nginx is located in /usr/local/etc/nginx. 
+```
+$ sudo php-fpm
+```     
+
+
+The nginx recommended method of serving up multiple websites used to be to create sites-available and sites-enabled directories within the nginx install. You would create your conf files in sites-available and then symlink them to sites-enabled if you wanted to enable them. This way you could enable and disable websites based on whether the conf is symlinked in sites-enabled. When installed with Homebrew, nginx is located in /usr/local/etc/nginx.      
 
 ```
 $ sudo /usr/libexec/locate.updatedb
